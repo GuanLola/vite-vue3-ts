@@ -1,61 +1,32 @@
 <template>
   <div>
     playground
-    {{ num1 }}
-    -
-    {{ num2 }}
-    -
-    {{ num3.count }}
   </div>
 </template>
 
 <script lang="ts" setup>
-import { ref, reactive, readonly } from 'vue'
+import { ref, reactive, readonly } from 'vue';
 
-let num1 = 10
-let num2 = ref(10)
-let num3 = reactive({count: 100})
-console.log(num1)
-console.log(num2)
-console.log(num3)
+const original = reactive({ count: 0 })
 
-// function reactive<T extends object>(target: T): UnwrapNestedRefs<T>
+const copy = readonly(original)
 
-const count = ref(1)
-const obj = reactive({ count })
+console.log(original)
+console.log(copy)
 
-// ref 会被解包
-console.log(obj, obj.count, count.value === obj.count)
+original.count++
+console.log(original)
+console.log(copy)
 
-// 会更新  `obj.count`
-count.value++
-console.log(count.value)
-console.log(obj.count)
-
-
-// 也会更新 `count` ref
-obj.count++
-console.log(obj.count)
-console.log(count.value)
-
-
-/* const count1 = ref(1)
-const obj1 = reactive({ count })
-
-obj1.count = count1
-
-console.log(obj1.count)
-
-console.log(obj.count === count.value)
+copy.count++
+console.log(original)
+console.log(copy)
 
 const raw = {
   count: ref(123)
 }
 
-const copy = readonly(raw)
-
-console.log(raw.count.value)
-console.log(copy.count) */
+const copy1 = readonly(raw)
 
 
 </script>
