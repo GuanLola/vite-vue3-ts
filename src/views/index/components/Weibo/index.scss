@@ -1,0 +1,173 @@
+@import '@/style/mixin.scss';
+.woo-pannel {
+  background-color: #fff;
+  margin-bottom: $bottom;
+  cursor: pointer;
+  @mixin width-height-100 {
+    width: 100%;
+    height: 100%;
+  }
+
+  .hot-topic-item {
+    padding: 12px 16px;
+    font-size: 14px;
+    color: #333;
+
+    .woo-box-flex {
+      display: flex;
+      align-items: center;
+
+      .woo-box-item-flex {
+        flex: 1;
+      }
+
+      .topic-title-item {
+
+        .topic-rank-nomal-img {
+          width: 32px;
+          height: 18px;
+          background: url('	https://h5.sinaimg.cn/upload/1005/948/2021/08/31/hotRankDefault.png');
+          background-size: 100%;
+          background-repeat: no-repeat;
+          position: relative;
+          margin-top: -2px;
+
+          .topic-order-num {
+            position: absolute;
+            left: 50%;
+            bottom: 2px;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1; 
+            transform: translate(-50%) skewX(-10deg);
+          }
+        }
+
+        .topic-rank-img {
+          width: 45.46px;
+          height: 22.79px;
+          background: url('https://h5.sinaimg.cn/upload/1005/948/2021/08/31/hotRank1.png');
+          background-size: 100%;
+          background-repeat: no-repeat;
+          position: relative;
+          margin-top: -6px;
+
+          .topic-order-num {
+            position: absolute;
+            left: auto;
+            right: 28.5%;
+            bottom: -2px;
+            transform: skewX(-10deg);
+            color: #fff;
+            font-size: 14px;
+            font-weight: 500;
+          }
+
+        }
+
+        .topic-item {
+          margin: 0 6px 0 8px;
+          height: 25px;
+          line-height: 25px;
+          font-weight: 700;
+          font-size: 18px;
+        }
+
+      }
+
+      .topic-title-text {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        -webkit-line-clamp: 1;
+        font-size: 14px;
+        line-height: 20px;
+        color: #333;
+        img:not([class]) {
+          width: 18px;
+          height: 18px;
+          vertical-align: -4px;
+        }
+        img[class=icon-link] {
+          width: 1em;
+          height: 1em;
+          margin-right: 2px;
+          vertical-align: -2px;
+        }
+      }
+
+      .hot-topic-num {
+        font-size: 12px;
+        margin-top: 10px;
+        line-height: 17px;
+        color: #939393;
+      }
+
+      .hot-topic-right {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        margin: 0 0 0 10px;
+
+        .hotTopic-video {
+          @include width-height-100;
+          position: relative;
+
+          .video-time {
+            position: absolute;
+            right: 4px;
+            bottom: 4px;
+            background-color: rgba($color: #000000, $alpha: .75);
+            z-index: 1;
+            border-radius: 2px;
+            line-height: 1;
+            font-size: 14px;
+            color: #333;
+            width: 37px;
+            height: 18px;
+            
+            span {
+              display: inline-block;
+              font-size: 12px;
+              color: #fff;
+              font-weight: 500;
+              height: 17px;
+              line-height: 17px;
+              text-align: center;
+              width: 100%;
+            }
+          }
+
+          .woo-picture-main {
+            @include width-height-100;
+            border-radius: 8px;
+            overflow: hidden;
+
+            &:hover {
+              .woo-picture-mask {
+                background-color: rgba($color: #000000, $alpha: .5)
+              }
+            }
+
+            .woo-picture-mask {
+              position: absolute;
+              left: 0;
+              top: 0;
+              border-radius: 8px;
+              @include width-height-100;
+              background-color: rgba($color: #000000, $alpha: 0)
+            }
+
+            .picture-img {
+              @include width-height-100;
+              object-fit: cover;
+            }
+          }
+          
+        }
+      }
+    }
+  }
+}

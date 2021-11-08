@@ -1,0 +1,61 @@
+.icon-container {
+  background-color: #fff;
+  margin: 10px 0;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  .icon-item-flex {
+    margin: 0 10px;
+    padding: 3px 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+
+    &::before {
+      transform: scaleX(0);
+      transform-origin: bottom right;
+      content: " ";
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      inset: 0 0 0 0;
+      background: #4dccc6;
+      z-index: 1;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover::before {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+
+    
+
+    .icon-item {
+      display: flex;
+      align-items: center;
+      
+      .icon-img {
+        width: 18px;
+        height: 18px;
+        position: relative;
+        z-index: 999;
+      }
+      .icon-text {
+        position: relative;
+        z-index: 999;
+        background-color: transparent;
+        display: inline-block;
+        color: rgb(54, 54, 54);
+        font-size: 14px;
+        margin-left: 8px;
+        &:hover {
+          color: #000;
+        }
+      }
+    }
+  }
+}
