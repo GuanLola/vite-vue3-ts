@@ -1,32 +1,17 @@
 <template>
   <div>
-    playground
+    <qr-code value="https://www.baidu.com/" :size="150" id="canvasDom"></qr-code>
   </div>
 </template>
 
-<script lang="ts" setup>
-import { ref, reactive, readonly } from 'vue';
-
-const original = reactive({ count: 0 })
-
-const copy = readonly(original)
-
-console.log(original)
-console.log(copy)
-
-original.count++
-console.log(original)
-console.log(copy)
-
-copy.count++
-console.log(original)
-console.log(copy)
-
-const raw = {
-  count: ref(123)
+<script lang="ts">
+import QRCodeVue3 from "qrcode-reader-vue3";
+console
+export default {
+  name: "QRCodeVue3Example",
+  components: { QRCodeVue3 },
+  setup() {
+    return {}
+  }
 }
-
-const copy1 = readonly(raw)
-
-
 </script>

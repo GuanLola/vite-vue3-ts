@@ -7,8 +7,12 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@vueuse/core": "^6.8.0",
     "axios": "^0.24.0",
     "element-plus": "^1.2.0-beta.2",
+    "qrcode": "^1.4.4",
+    "qrcode-reader-vue3": "^3.1.2",
+    "qrcode.vue": "^3.3.3",
     "vue": "^3.2.16",
     "vue-router": "4.0.12"
   },
