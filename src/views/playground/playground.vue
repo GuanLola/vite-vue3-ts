@@ -1,17 +1,19 @@
 <template>
   <div>
     <qr-code value="https://www.baidu.com/" :size="150" id="canvasDom"></qr-code>
+    
 
     {{ count }}
     <button @click="addCount">+</button>
     {{ myCount }}
+    
+    
   </div>
 </template>
 
 <script lang="ts" setup>
 import { ref, computed } from 'vue'
 import { useStore } from 'vuex'
-import QRCodeVue3 from "qrcode-reader-vue3";
 
 const count = ref(0)
 const addCount = () => {

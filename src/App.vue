@@ -2,6 +2,7 @@
   <HeaderNav />
   <Github />
   <Gitee />
+  <RoundClock />
   <router-view class="router-view" />
 </template>
 
@@ -9,6 +10,8 @@
 import HeaderNav from '@/components/HeaderNav.vue'
 import Github from '@/components/svg/Github.vue'
 import Gitee from '@/components/svg/Gitee.vue'
+import RoundClock from '@/components/roundClock/index.vue'
+
 </script>
 
 <style lang="scss" scoped>
