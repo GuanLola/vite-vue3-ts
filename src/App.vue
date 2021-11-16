@@ -3,6 +3,7 @@
   <Github />
   <Gitee />
   <RoundClock />
+  <qr-code class="qr-code" value="https://github.com/GuanLola" :size="50" id="canvasDom"></qr-code>
   <router-view class="router-view" />
 </template>
 
@@ -19,5 +20,11 @@ import RoundClock from '@/components/roundClock/index.vue'
   width: 980px;
   padding-top: 65px;
   margin: auto;
+}
+
+.qr-code {
+  position: fixed;
+  right: 0;
+  bottom: 0;
 }
 </style>
